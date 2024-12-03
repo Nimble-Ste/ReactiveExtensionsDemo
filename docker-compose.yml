@@ -1,0 +1,9 @@
+services:
+  temperaturecontroller.api:
+    image: ${DOCKER_REGISTRY-}temperaturecontrollerapi
+    build:
+      context: .
+      dockerfile: TemperatureController.API/Dockerfile
+    ports:
+      - 1080:8080
+      - 1081:443
